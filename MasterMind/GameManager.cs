@@ -10,9 +10,9 @@ namespace MasterMind
 {
     class GameManager
     {
-        Ball ball = new Ball();
-        Code code = new Code();
-        CodeChecker checker = new CodeChecker();
+        private Ball ball = new Ball();
+        private Code code = new Code();
+        private CodeChecker checker = new CodeChecker();
         public GameManager()
         {
 

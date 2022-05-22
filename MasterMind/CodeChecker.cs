@@ -12,8 +12,8 @@ namespace MasterMind
     {
         private int reds = 0;
         private int whites = 0;
-        bool[] correct = new bool[4];
-        bool[] semiCorrect = new bool[4];
+        private bool[] correct = new bool[4];
+        private bool[] semiCorrect = new bool[4];
         private Brush[] code;
         private Brush[] userColors;
         public CodeChecker()
