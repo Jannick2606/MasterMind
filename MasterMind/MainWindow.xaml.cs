@@ -30,6 +30,7 @@ namespace MasterMind
         private bool[] filled = new bool[4];
         private Brush[] currentColors = new Brush[4];
         private Button[,] pins;
+        private int buttonsRevealed = 0;
 
         //I initialize the arrays when the game opens
         public MainWindow()
@@ -169,6 +170,7 @@ namespace MasterMind
             EndBox.Visibility = Visibility.Hidden;
             RestartButton.Visibility = Visibility.Hidden;
             activeRow = 0;
+            buttonsRevealed = 0;
             SetFilledFalse();
             AddClick();
         }
@@ -195,7 +197,7 @@ namespace MasterMind
         }
         private void PaintCode()
         {
-            for (int i = 0; i < code.Length; i++)
+            for (int i = buttonsRevealed; i < code.Length; i++)
             {
                 code[i].Fill = gm.GetCode()[i];
             }
@@ -210,6 +212,15 @@ namespace MasterMind
                     pins[j, i].Background = Brushes.Transparent;
                 }
                 code[i].Fill = Brushes.LightGray;
+            }
+        }
+
+        private void HintButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (buttonsRevealed < 4)
+            {
+                code[buttonsRevealed].Fill = gm.GetCode()[buttonsRevealed];
+                buttonsRevealed++;
             }
         }
     }

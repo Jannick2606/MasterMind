@@ -37,9 +37,10 @@
             <ColumnDefinition Width=".5*"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
-        <Label HorizontalAlignment="Left" Margin="-10,0,0,0" Grid.Row="11" VerticalAlignment="Top" Grid.ColumnSpan="10" Height="125" Grid.RowSpan="3" Width="750" Background="#FFBBBBBB"/>
-        
+
+        <Label HorizontalAlignment="Left" Margin="-10,0,0,0" Grid.Row="11" VerticalAlignment="Top" Grid.ColumnSpan="10" Height="125" Grid.RowSpan="3" Width="750" Background="#FFBBBBBB">
+        </Label>
+
         <Button Style="{DynamicResource RoundButtons}" Grid.Row="12" Grid.Column="1" Background="Blue" Click="ColorButton_Click"/>
         <Button Style="{DynamicResource RoundButtons}" Grid.Row="12" Grid.Column="2" Background="Yellow" Click="ColorButton_Click"/>
         <Button Style="{DynamicResource RoundButtons}" Grid.Row="12" Grid.Column="3" Background="Green" Click="ColorButton_Click"/>
@@ -99,6 +100,7 @@
         <Button x:Name="Row5Pin3" Style="{DynamicResource Small}" Grid.Row="6" Grid.Column="7"/>
         <Button x:Name="Row5Pin4" Style="{DynamicResource Small}" Grid.Row="6" Grid.Column="8"/>
 
+        <Button Content="Hint" Style="{DynamicResource RemoveStyles}" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="12" Click="HintButton_Click"/>
         <Button Style="{DynamicResource RemoveStyles}" Content="Gæt" Width="100" Height="50" Grid.Column="9" HorizontalAlignment="Center" Grid.Row="12" VerticalAlignment="Center" Click="GuessButton_Click"/>
 
         <TextBox x:Name="EndBox" Grid.ColumnSpan="10" Width="750" Height="750" Grid.RowSpan="14" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Margin="-10,0,-10,-16" Background="SandyBrown" Visibility="Hidden"/>
@@ -111,6 +113,5 @@
 
         <TextBox x:Name="StartBox" Grid.ColumnSpan="10" Text="Velkommen til Mastermind!" Width="750" Height="750" Grid.RowSpan="14" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Margin="-10,0,-10,-16" Background="SandyBrown"/>
         <Button x:Name="StartButton" Style="{DynamicResource RemoveStyles}" Content="Start" Width="346" Height="106" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Click="StartButton_Click" Grid.ColumnSpan="5" Grid.RowSpan="2" Grid.Row="8" FontSize="50"/>
-
     </Grid>
 </Window>
