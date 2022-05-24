@@ -214,7 +214,8 @@ namespace MasterMind
                 code[i].Fill = Brushes.LightGray;
             }
         }
-
+        //Reveals the first color in the code
+        //Then it reveals the next one and the next one
         private void HintButton_Click(object sender, RoutedEventArgs e)
         {
             if (buttonsRevealed < 4)
